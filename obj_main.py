@@ -6,7 +6,6 @@ class List:
     def __init__(self):
         self._values = []
         self._count = 0
-        self._letters = ['a', 'b', 'c', 'd', 'e']
         return
 
     #append - adds new value to the list
@@ -16,7 +15,6 @@ class List:
     
     #gen_to_question
     def gen_to_question(self, gen):
-        letters = ['a', 'b', 'c', 'd', 'e']
         self._count = 0
         for i in gen:
             temp = []
