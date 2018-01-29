@@ -1,3 +1,11 @@
+'''
+-----------------------------
+|    EZ140.py               |
+|    Dylan Clarry           |
+|    Main program           |
+|    January 28 2018        |
+-----------------------------
+'''
 import sys
 import os
 from obj_main import List
@@ -8,7 +16,6 @@ path = os.getcwd() + '\\question_bank\\'
 loop = True
 list_made = False
 
-#main loop
 while loop:
     print_menu()
     choice = input()
@@ -20,7 +27,6 @@ while loop:
         var_file = input("file name: ")
         if var_file.endswith('.txt') == False:
             var_file += '.txt'
-            
     #initialize
     elif choice == str(2):
         print()
@@ -31,7 +37,6 @@ while loop:
             list_made = True
         except NameError:
                 print("error. file name not given.")
-                
     #start quiz
     elif choice == str(3):
         print()
@@ -41,7 +46,6 @@ while loop:
             l.quiz()
         else:
             print("error. file not initialized.")
-            
     #instructions
     elif choice == str(4):
         read_me()
@@ -89,5 +93,3 @@ while loop:
         print("error. not valid selection.")
     print()
 sys.exit(0)
-
-

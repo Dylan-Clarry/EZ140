@@ -1,5 +1,14 @@
+'''
+-----------------------------
+|    functions.py           |
+|    Dylan Clarry           |
+|    external functions     |
+|    January 28 2018        |
+-----------------------------
+'''
 #read file
 def read_file(var_file, path):
+        #try to open file
         try:
             path += var_file
             file = open(path, 'r')
@@ -7,6 +16,7 @@ def read_file(var_file, path):
                 yield (line)
             file.close()
             print("file initialized.")
+        #File not found
         except FileNotFoundError:
             print("error. file '{}' not found in path.".format(var_file))
 
@@ -39,7 +49,7 @@ def print_title():
     print("   $$          /$$             $$        $$    $$  /$$$")
     print("  /$$$$$$$$$$  /$$$$$$$$$$  /$$$$$$      $$    /$$$$$$/")
     print("   _________/   _________/  /_____/     /_/    ______/" )
-    print("  By Dylan Clarry                                 V 0.1")
+    print("  By Dylan Clarry                                 V 0.2")
     print("  March 5th 2017")
     print()
 
